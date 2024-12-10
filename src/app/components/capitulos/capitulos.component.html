@@ -1,0 +1,37 @@
+<app-menu></app-menu>
+<div class="container" style="max-width: 90%;">
+    <div class="container py-5">        
+    </div>
+
+
+
+    <div class="container-fluid service ">
+      <div class="container">
+          <div class="section-title mb-5 wow fadeInUp" data-wow-delay="0.2s">
+              <div class="sub-style">
+                  <h4 class="sub-title px-3 mb-0">Capítulos Vigentes</h4>
+              </div>
+          </div>
+          <div class="row g-4 justify-content-center">
+              <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s"
+                  *ngFor="let capitulo of capitulosList">
+                  <div class="service-item rounded">
+                      <div class="service-img rounded-top">
+                          <img src="img/service-1.jpg" class="img-fluid rounded-top w-100" alt="">
+                      </div>
+                      <div class="service-content rounded-bottom bg-light p-4">
+                          <div class="service-content-inner">
+                              <h5 class="mb-4">{{capitulo.numeroCap}}. {{capitulo.titulo}}</h5>
+                              <p class="mb-4">{{capitulo.numeroArticulos}}</p>
+                              <a (click)="verArticulos(capitulo.numeroCap)"
+                                  class="btn btn-primary rounded-pill text-white py-2 px-4 mb-2">Ver artículos</a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+      <footer class="text-center footerM" style="background-color:#509593;">
+    </footer>
+</div>
